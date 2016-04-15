@@ -22,7 +22,7 @@ net.socketTls(
 		protocol: aggr.protocol,
 		fallback: aggr.fallback('/tmp'),
 		name: 'SocketEntry',
-		token: 'mkjhdasldjfhlkjdhclzjxhca'
+		token: 'mkjhdasldjfhlkjdhclzjxhc'
 	}
 ).listen({
 	port: 1338,
@@ -38,5 +38,4 @@ setInterval(function() {
 		r.ingest('test2', b[0], b[1], b[2]);
 	}
 }, 200);
-
 

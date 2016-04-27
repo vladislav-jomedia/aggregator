@@ -16,7 +16,7 @@ var r = new Aggregator(1000,100,{
 });
 var net = aggr.net;
 
-net.socketTls(
+net.clientTls(
 	{
 		aggregator: r,
 		protocol: aggr.protocol,
@@ -37,5 +37,5 @@ setInterval(function() {
 		var b = generate();
 		r.ingest('test2', b[0], b[1], b[2]);
 	}
-}, 200);
+}, 2);
 

@@ -15,7 +15,7 @@
   "dependencies": {
     "byline": "^4.2.1",
     "reconnect-net": "0.0.0",
-    "reconnect-tls": "0.0.1",
+    "reconnect-tls": "github:vladislav-jomedia/reconnect-tls",
     "winston": "^0.9.0"
   },
   "devDependencies": {

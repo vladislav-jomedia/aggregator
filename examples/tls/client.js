@@ -9,10 +9,10 @@ function generate() {
 
 var aggr = require('../../index');
 var Aggregator = aggr.aggregator;
-var r = new Aggregator(1000,100,{
+var r = new Aggregator(10000,1000,{
 		protocol: aggr.protocol,
 		fallback: aggr.fallback('/tmp'),
-		name: 'AggregatorEntry'
+		name: 'AggregatorClient'
 });
 var net = aggr.net;
 
@@ -21,7 +21,7 @@ net.clientTls(
 		aggregator: r,
 		protocol: aggr.protocol,
 		fallback: aggr.fallback('/tmp'),
-		name: 'SocketEntry',
+		name: 'SocketClient',
 		token: 'mkjhdasldjfhlkjdhclzjxhc'
 	}
 ).listen({
@@ -37,5 +37,5 @@ setInterval(function() {
 		var b = generate();
 		r.ingest('test2', b[0], b[1], b[2]);
 	}
-}, 2);
+}, 100);
 

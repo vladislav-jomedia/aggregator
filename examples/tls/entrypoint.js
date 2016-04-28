@@ -7,10 +7,10 @@ var aggr = require('../../index');
 
 var Aggregator = aggr.aggregator;
 
-var r = new Aggregator(1000,100,{
+var r = new Aggregator(10000,1000,{
 		protocol: aggr.protocol,
 		fallback: aggr.fallback('/tmp'),
-		name: 'AggregatorPass'
+		name: 'AggregatorEntry'
 });
 
 var net = aggr.net;
@@ -26,13 +26,13 @@ net.socket({
 	protocol: protocol,
 	fallback: aggr.fallback('/tmp'),
 	logger: logger,
-	name: 'SocketPass'
+	name: 'SocketEntry'
 }).listen(1337,'127.0.0.1');
 
 net.serverTls({
 	aggregator: r,
 	protocol: protocol,
-	name: 'ServerPass',
+	name: 'ServerEntry',
 	authBase: {
 		'mkjhdasldjfhlkjdhclzjxhc': "adserving",
 		'mkjhdasldjfhlkjdhclzjxsd': "adserving"

@@ -1,5 +1,3 @@
-const tls = require('tls');
-var fs = require('fs');
 function getRandomInt(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -9,25 +7,24 @@ function generate() {
 
 var aggr = require('../../index');
 var Aggregator = aggr.aggregator;
-var r = new Aggregator(10000,1000,{
+var r = new Aggregator(1000,1000,{
 		protocol: aggr.protocol,
 		fallback: aggr.fallback('/tmp'),
 		name: 'AggregatorClient'
 });
 var net = aggr.net;
 
-net.clientTls(
+net.client(
 	{
 		aggregator: r,
 		protocol: aggr.protocol,
 		fallback: aggr.fallback('/tmp'),
 		name: 'SocketClient',
-		token: 'mkjhdasldjfhlkjdhclzjxhc'
+		client: 'reconnect-net'
 	}
 ).listen({
 	port: 1338,
-	host: 'ta.infra.systems',
-	rejectUnauthorized: false
+	host: '127.0.0.1'
 });
 
 setInterval(function() {

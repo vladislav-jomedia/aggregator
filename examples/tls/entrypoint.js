@@ -38,8 +38,8 @@ net.serverTls({
 		'mkjhdasldjfhlkjdhclzjxsd': "adserving"
 	},
 	tlsServerOpt: {
-  		key: fs.readFileSync('/home/vlad/infra_repo/certificates/star_infra_systems/star_infra_systems.key'),
-  		cert: fs.readFileSync('/home/vlad/infra_repo/certificates/star_infra_systems/nginx-bundle.pem'),
-  		ca:  fs.readFileSync('/home/vlad/infra_repo/certificates/star_infra_systems/COMODORSADomainValidationSecureServerCA.crt')
+  		key: fs.readFileSync('/tmp/certs/key.key'),
+  		cert: fs.readFileSync('/tmp/certs/cert.pem'),
+  		ca:  fs.readFileSync('/tmp/certs/ca.crt')
 	}
 }).listen(1338, '127.0.0.1');

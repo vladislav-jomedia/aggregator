@@ -1,6 +1,6 @@
 {
   "name": "aggregator",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "A module that facilitates implementation of data aggregation system",
   "main": "index.js",
   "scripts": {
@@ -15,8 +15,7 @@
   "dependencies": {
     "byline": "^4.2.1",
     "reconnect-net": "0.0.0",
-    "reconnect-tls": "0.0.2",
-    "winston": "^0.9.0"
+    "reconnect-tls": "0.0.2"
   },
   "devDependencies": {
     "assert": "^1.3.0",

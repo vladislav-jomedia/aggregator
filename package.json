@@ -13,9 +13,7 @@
   "author": "Tomasz Rakowski",
   "license": "ISC",
   "dependencies": {
-    "byline": "^4.2.1",
-    "reconnect-net": "0.0.0",
-    "reconnect-tls": "0.0.2"
+    "byline": "^4.2.1"
   },
   "devDependencies": {
     "assert": "^1.3.0",

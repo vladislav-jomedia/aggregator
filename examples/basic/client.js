@@ -12,6 +12,8 @@ var r = new Aggregator(1000,1000,{
 		fallback: aggr.fallback('/tmp'),
 		name: 'AggregatorClient'
 });
+
+var reconnect = require('reconnect-net');
 var net = aggr.net;
 
 net.client(
@@ -20,12 +22,14 @@ net.client(
 		protocol: aggr.protocol,
 		fallback: aggr.fallback('/tmp'),
 		name: 'SocketClient',
-		client: 'reconnect-net'
+		token: 'mkjhdasldjfhlkjdhclzjxhc',
+		client: reconnect
 	}
 ).listen({
 	port: 1338,
-	host: '127.0.0.1'
+	host: 'ta.infra.systems',
 });
+
 
 setInterval(function() {
 	for(var i = 0; i < 10000; i++) {

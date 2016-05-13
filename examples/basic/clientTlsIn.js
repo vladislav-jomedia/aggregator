@@ -19,6 +19,7 @@ var net = aggr.net;
 
 var Aggregator = aggr.aggregator;
 var r = new Aggregator(1000,1000,{
+		debug: true,
 		protocol: aggr.protocol,
 		fallback: aggr.fallback('/tmp'),
 		name: 'AggregatorClient'

@@ -12,7 +12,7 @@ net.clientOut(
 	}
 ).listen({
 	port: 1335,
-	host: 'ta.infra.systems',
+	host: 'ta.example.com',
 	rejectUnauthorized: false
 });
 

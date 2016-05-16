@@ -36,7 +36,7 @@ net.clientIn(
 	}
 ).listen({
 	port: 1338,
-	host: 'ta.infra.systems',
+	host: 'ta.example.com',
 	rejectUnauthorized: false
 });
 
